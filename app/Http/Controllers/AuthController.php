@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
+=======
 // use  App\Models\User;
 // use Tymon\JWTAuth\Facades\JWTAuth;
+>>>>>>> 49d6f3e912e8e57b8b2480cb2d8d5c21865246f3
 
 class AuthController extends Controller
 {

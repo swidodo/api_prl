@@ -61,6 +61,10 @@ $app->singleton(
 
 $app->configure('app');
 $app->configure('jwt');
+<<<<<<< HEAD
+$app->configure('permission');
+=======
+>>>>>>> 49d6f3e912e8e57b8b2480cb2d8d5c21865246f3
 
 /*
 |--------------------------------------------------------------------------
@@ -78,9 +82,10 @@ $app->configure('jwt');
 // ]);
 
 $app->routeMiddleware([
-    'auth' => App\Http\Middleware\Authenticate::class,
+    'auth'       => App\Http\Middleware\Authenticate::class,
+    'permission' => Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    'role'       => Spatie\Permission\Middlewares\RoleMiddleware::class,
 ]);
-
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -95,6 +100,12 @@ $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+<<<<<<< HEAD
+
+$app->alias('cache', \Illuminate\Cache\CacheManager::class);  // if you don't have this already
+$app->register(Spatie\Permission\PermissionServiceProvider::class);
+=======
+>>>>>>> 49d6f3e912e8e57b8b2480cb2d8d5c21865246f3
 
 /*
 |--------------------------------------------------------------------------
