@@ -18,9 +18,16 @@
 // });
 
 $router->get('/', function () use ($router) {
-    echo "<center> Welcome </center>";
+    echo "<center> Welcome App version 0.0.1</center>";
 });
 
+<<<<<<< HEAD
+=======
+// $router->get('/version', function () use ($router) {
+//     return $router->app->version();
+// });
+
+>>>>>>> 49d6f3e912e8e57b8b2480cb2d8d5c21865246f3
 Route::group([
     'prefix' => 'api'
     ], function ($router) {
